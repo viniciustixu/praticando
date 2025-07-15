@@ -1,22 +1,25 @@
 import Link from 'next/link';
 
-export default async function posts() {
-  const response = await fetch('https://dummyjson.com/posts');
+export default async function userPosts({ params }) {
+  const { id } = await params;
+
+  const response = await fetch(`https://dummyjson.com/posts/user/${id}`);
   const data = await response.json();
 
   return (
     <div>
+      <h1 className='text-3xl font-semibold mt-4 my-4 mx-auto min-w-[722px] max-w-[1080px]'>
+        User {id}: {data.total} post(s)
+      </h1>
+
       {data.posts.map((item, index) => (
         <div
           key={index}
           className='border rounded-2xl p-3 my-4 mx-auto bg-stone-400 min-w-[722px] max-w-[1080px]'>
           <div className='flex justify-between'>
-            <h1 className='text-3xl font-semibold mb-2 hover:text-fuchsia-300 hover:cursor-pointer pr-5 pb-2'>
+            <h1 className='text-3xl font-semibold mb-2  pr-5 pb-2 hover:text-fuchsia-300 hover:cursor-pointer'>
               <Link href={`/posts/detail/${item.id}`}>{item.title}</Link>
             </h1>
-            <p className='hover:text-fuchsia-300 hover:cursor-pointer px-3 self-baseline'>
-              <Link href={`/posts/user/${item.userId}`}>{item.userId}</Link>
-            </p>
           </div>
 
           <p key={item.id} className='font-sans mb-2'>
