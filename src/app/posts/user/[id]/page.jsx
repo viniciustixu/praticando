@@ -13,10 +13,8 @@ export default async function userPosts({ params }) {
       </h1>
 
       {data.posts.map((item, index) => (
-        <div
-          key={index}
-          className='border rounded-2xl p-3 my-4 mx-auto bg-stone-400 min-w-[722px] max-w-[1080px]'>
-          <div className='flex justify-between'>
+        <div key={index} className='card-post'>
+          <div>
             <h1 className='text-3xl font-semibold mb-2  pr-5 pb-2 hover:text-fuchsia-300 hover:cursor-pointer'>
               <Link href={`/posts/detail/${item.id}`}>{item.title}</Link>
             </h1>

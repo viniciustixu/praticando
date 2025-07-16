@@ -12,7 +12,7 @@ export default async function postDetail({ params }) {
         post de: {data.userId}
       </h1>
 
-      <div className='border rounded-2xl p-3 my-4 mx-auto bg-stone-400 min-w-[722px] max-w-[1080px]'>
+      <div className='card-post'>
         <div className='flex justify-between'>
           <h1 className='text-3xl font-semibold  pr-5'>{data.title}</h1>
           <p className='hover:text-fuchsia-300 hover:cursor-pointer px-3 content-center'>
