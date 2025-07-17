@@ -18,12 +18,14 @@ export default function RootLayout({ children }) {
             <Link href="/posts">
               <p className='hover:text-fuchsia-300 hover:cursor-pointer hover:underline hover:underline-offset-12'>Posts</p>
             </Link>
-            <p className='hover:text-fuchsia-300 hover:cursor-pointer hover:underline hover:underline-offset-12'>Products</p>
+            <Link href="/products">
+              <p className='hover:text-fuchsia-300 hover:cursor-pointer hover:underline hover:underline-offset-12'>Products</p>
+            </Link>
           </nav>
         </header>
 
         {children}
       </body>
-    </html>
+    </html >
   );
 }

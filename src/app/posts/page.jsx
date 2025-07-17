@@ -5,7 +5,7 @@ export default async function posts() {
   const data = await response.json();
 
   return (
-    <div>
+    <main>
       {data.posts.map((item, index) => (
         <div
           key={index}
@@ -38,13 +38,13 @@ export default async function posts() {
                 <p
                   key={index + 'a'}
                   className='bg-amber-400 px-3 rounded-2xl hover:bg-fuchsia-300 hover:cursor-pointer'>
-                  {item}
+                  <Link href={`/posts/searchbytag/${item}`}>{item}</Link>
                 </p>
               ))}
             </div>
           </div>
         </div>
       ))}
-    </div>
+    </main>
   );
 }
