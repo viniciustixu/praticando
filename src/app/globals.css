@@ -16,3 +16,16 @@
   background-color: #ffba00;
   border-radius: 6px;
 }
+
+.scroll-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-infinite {
+  animation: scroll-infinite 20s linear infinite;
+}
