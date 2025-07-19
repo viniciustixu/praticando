@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function RootLayout({ children }) {
   return (
     <html lang="pt">
-      <body className='bg-gray-300'>
+      <body className='bg-gray-300 min-h-[100vh] '>
         <header className='flex justify-between bg-gray-800 text-amber-400 p-3'>
           <div>
             <Link href="/">

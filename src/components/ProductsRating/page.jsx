@@ -5,7 +5,7 @@ export default async function ProductsRating() {
   const produtosPorRating = data.products.sort((a, b) => b.rating - a.rating);
 
   return (
-    <aside className='flex flex-wrap max-w-[50vw] max-h-[70vh] bg-stone-400 overflow-y-auto custom-scroll m-2  rounded-[6px] '>
+    <aside className='flex flex-wrap max-w-[50vw] bg-stone-400 overflow-y-auto custom-scroll m-2  rounded-[6px] '>
       <h1 className={'w-full text-4xl font-semibold mb-4 p-2 text-center'}>
         Top rating
       </h1>

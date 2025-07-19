@@ -48,8 +48,8 @@ export default async function ProductDetail({ params }) {
 
       <article>
         <h1>Reviews:</h1>
-        {data.reviews.map((item) => (
-          <section>
+        {data.reviews.map((item, index) => (
+          <section key={index}>
             <h2>{item.reviewerName}</h2>
             <h2>{item.reviewerEmail}</h2>
             <h3>{item.date}</h3>
