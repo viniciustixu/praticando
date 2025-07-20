@@ -71,9 +71,9 @@ export default function ProductsHome() {
 
       <div className=' ml-128'>
         <div className='flex gap-2 flex-wrap justify-center m-2'>
-          {filteredProducts.map((item) => (
-            <div className='card bg-base-100 w-96 shadow-sm'>
-              <figure key={item.id}>
+          {filteredProducts.map((item, index) => (
+            <div className='card bg-base-100 w-96 shadow-sm' key={item.index}>
+              <figure>
                 <img src={item.images[0]} alt='Product image' />
               </figure>
               <div className='card-body'>
